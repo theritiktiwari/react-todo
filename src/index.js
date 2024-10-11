@@ -1,3 +1,8 @@
+/**
+ * @file index.js
+ * @description The main entry point of the app
+ */
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
@@ -5,11 +10,12 @@ import App from './App';
 import { ToastProvider } from './context/ToastContext';
 import { TodoProvider } from './context/TodoContext';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot( document.getElementById( 'root' ) );
 
-root.render(
+if ( root ) {
+	root.render(
 	<>
-		{process.env.NODE_ENV === 'development' ? (
+		{ process.env.NODE_ENV === 'development' ? (
 			<React.StrictMode>
 				<ToastProvider>
 					<TodoProvider>
@@ -23,6 +29,7 @@ root.render(
 					<App />
 				</TodoProvider>
 			</ToastProvider>
-		)}
+		) }
 	</>
-);
+	);
+}

@@ -259,6 +259,13 @@ body {
 	text-align: center;
 }
 
+.not-found {
+	text-align: center;
+	font-weight: bold;
+	color: $danger-color;
+	opacity: 0.5;
+}
+
 .todo-list {
 	display: flex;
 	flex-direction: column;
